@@ -551,7 +551,7 @@
                 </div>
 
 
-                <video class="video" src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop></video>
+                <video class="video" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
             
                 <div class="txtBox flex items-center justify-center flex-col w-full h-full  text-white absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <h3 class="lg:text-[160px] md:text-[120px] text-[60px] lg:leading-[190px] md:leading-[143px] leading-[72px] font-bold md:mb-6 mb-3">
@@ -3385,48 +3385,53 @@
 
         const video = document.querySelector(".video");
         const videoSection = document.querySelector(".video-section");
-        const videoContainer = document.querySelector(".video-container");
 
-        // 최대 반지름: 화면 대각선 길이
-        const maxRadius = Math.sqrt(window.innerWidth**2 + window.innerHeight**2);
+        // [수정] 대각선 길이에 여유값(* 1.5)을 곱해 화면 구석까지 무조건 덮도록 설정
+        function getMaxRadius() {
+            return Math.sqrt(window.innerWidth**2 + window.innerHeight**2) * 1.5;
+        }
 
         function getStartClipPath() {
             const w = window.innerWidth;
             const h = window.innerHeight;
             const min = Math.min(w, h);
 
-            // 모바일
+            // [중요] 끝날 때의 중심점(50% 50%)과 일치하도록 중심점 통일
             if (w < 768) {
-                return `circle(${min * 0.28}px at 50% 55%)`;
+                return `circle(${min * 0.28}px at 50% 50%)`;
             }
-
-            // 태블릿
             if (w < 1280) {
-                return `circle(${min * 0.22}px at 50% 60%)`;
+                return `circle(${min * 0.22}px at 50% 50%)`;
             }
-
-            // 데스크탑
-            return `circle(${min * 0.18}px at 50% 60%)`;
+            return `circle(${min * 0.18}px at 50% 50%)`;
         }
 
+        // 1. 영상 크기 및 재생 제어
         gsap.fromTo(
             video,
             {
-                // clipPath: "circle(150px at 50% 50%)"
                 clipPath: getStartClipPath()
             },
             {
-                clipPath: `circle(${maxRadius}px at 50% 50%)`,
+                // [수정] 스크롤 할 때마다 실시간 화면 크기를 반영하거나 여유로운 maxRadius를 적용
+                clipPath: () => `circle(${getMaxRadius()}px at 50% 50%)`,
                 ease: "none",
                 scrollTrigger: {
-                trigger: videoSection,
-                start: "top top",
-                end: "50% top",
-                scrub: true,
+                    trigger: videoSection,
+                    start: "top top",
+                    end: "50% top",
+                    scrub: true,
+                    invalidateOnRefresh: true, // [추가] 화면 리사이즈 시 값 재계산
+                    onEnter: () => video.play(),
+                    onLeaveBack: () => {
+                        video.pause();
+                        video.currentTime = 0;
+                    }
                 }
             }
         );
 
+        // 2. 텍스트 박스 애니메이션
         gsap.fromTo(
             ".txtBox",
             { opacity: 0, y: 100 },
@@ -3436,8 +3441,8 @@
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: videoSection,
-                    start: "30% top", // 원래 50% → 40%로 앞당김
-                    end: "65% top",   // 원래 75% → 65%로 앞당김
+                    start: "30% top",
+                    end: "65% top", 
                     scrub: true
                 }
             }
