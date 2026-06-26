@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <title>글로벌 영역</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Monda:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+        .pretendard {
+          font-family: 'Pretendard Variable', sans-serif;
+        }
+
+        .lato {
+          font-family: 'Lato', sans-serif;
+        }
+
+        .montserrat{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        * {word-break: keep-all; letter-spacing: -1px;}
+    </style>
+
+
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+    </style>
+    <!-- lenis Fin -->
+
+
+</head>
+<body class="pretendard">
+
+
+    <header class="fixed left-0 top-10 w-full z-[9999]">
+        <div class="lg:px-12 px-[5%] box-border w-[90%] flex lg:justify-between justify-end mx-auto bg-white rounded-full relative h-[72px]">
+            <h1 class="absolute lg:left-1/2 left-[5%] top-1/2 transform lg:-translate-x-1/2 -translate-y-1/2">
+                <a href="/" class="block xl:w-[270px] w-[200px] h-[45px] bg-center bg-contain bg-no-repeat" style="background-image: url('assets/images/global/logo.png');">
+                    <span class="sr-only">리커브 PT X 본척척 재활센터</span>
+                </a>
+            </h1>
+            <div class="relative w-[210px] lg:flex hidden items-center">
+                <div class="relative flex items-center gap-3">
+                    <img class="block w-[13px] h-[25px]" src="assets/images/global/symbol.png" alt="리커브">
+                    
+                    
+                    <div class="btn-select">
+                        <div class="text-swiper-container relative w-full overflow-hidden font-semibold text-base text-[#111111]">
+                            <ul class="swiper-wrapper">
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    닥터 케어 트레이닝
+                                </li>
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    척추 교정 트레이닝
+                                </li>
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    시니어 트레이닝
+                                </li>
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    목적성 트레이닝
+                                </li>
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    중·고생 수험생 트레이닝
+                                </li>
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    산전·산후 트레이닝
+                                </li>
+                                <li class="cursor-pointer relative swiper-slide w-full overflow-hidden">
+                                    엘리트 & 아마추어 트레이닝
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <span class="arrow-icon transform transition-transform duration-300 absolute right-0 top-1/2 transform -translate-y-1/2 block pr-5 w-[8px] h-[5px] bg-center bg-contain bg-no-repeat" style="background-image: url('assets/images/global/select_arrow.png');"></span>
+                        <!-- text vertical slide Fin -->
+                    </div>
+
+
+                </div>
+                <ul class="list-member text-[15px] font-medium border border-[#C5C5C5] absolute top-[72px] left-0 invisible opacity-0 transition transition-all duration-500 ease-out bg-white rounded-[10px] p-4 box-border w-full">
+                    <li class="group">
+                        <a href="" class="block transition transition-all duration-300 ease-out w-full py-[7px] text-[#454545] group-hover:text-[#6CBEC1]">
+                            척추 교정 트레이닝
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="" class="block transition transition-all duration-300 ease-out w-full py-[7px] text-[#454545] group-hover:text-[#6CBEC1]">
+                            시니어 트레이닝
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="" class="block transition transition-all duration-300 ease-out w-full py-[7px] text-[#454545] group-hover:text-[#6CBEC1]">
+                            목적성 트레이닝
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="" class="block transition transition-all duration-300 ease-out w-full py-[7px] text-[#454545] group-hover:text-[#6CBEC1]">
+                            중·고생 수험생 트레이닝
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="" class="block transition transition-all duration-300 ease-out w-full py-[7px] text-[#454545] group-hover:text-[#6CBEC1]">
+                            산전·산후 트레이닝
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="" class="block transition transition-all duration-300 ease-out w-full py-[7px] text-[#454545] group-hover:text-[#6CBEC1]">
+                            엘리트 & 아마추어 트레이닝
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-7">
+                <div class="lg:flex hidden items-center">
+                    <div class="text-[14px] leading-[17px] font-semibold text-[#8C8C8C]">
+                        <button class="px-3 relative
+                            after:content-[''] after:absolute after:right-0 after:top-1/2 after:transform after:-translate-y-1/2 after:w-px after:h-[10px] after:bg-[#8C8C8C]">
+                            로그인
+                        </button>
+                        <button class="px-3">
+                            가맹문의
+                        </button>
+                    </div>
+                    <a href="" class="bg-[#6FC1BC] text-white text-sm font-medium py-2 px-4 rounded-full">
+                        <span class="pl-5 relative
+                            before:content-[''] before:absolute before:left-0 before:top-1/2 before:transform before:-translate-y-1/2 before:w-5 before:h-5 before:bg-center before:bg-contain before:bg-no-repeat before:bg-[url('assets/images/global/contact_icon.png')]">
+                            무료상담
+                        </span>
+                    </a>
+                </div>
+
+                <button id="hamburger" class="transition transition-all duration-300 ease-out flex flex-col justify-center gap-[7px] w-9 h-9">
+                    <span class="transition transition-all duration-300 ease-out rounded-lg block w-[26px] h-[2px] rounded-full bg-[#222222]"></span>
+                    <span class="transition transition-all duration-300 ease-out rounded-lg block w-[26px] h-[2px] rounded-full bg-[#222222]"></span>
+                    <span class="transition transition-all duration-300 ease-out rounded-lg block w-[26px] h-[2px] rounded-full bg-[#222222]"></span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="hidden w-full h-full fixed left-0 top-0 bg-white">
+            <nav>
+                <ul>
+                    <li>
+                        <ul class="text-[26px] leading-[31px] text-[#111111] font-bold">
+                            <li>
+                                <a href="" class="block">
+                                    리커브 소개
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    의료진&강사진 소개
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    시설 안내
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    지점 및 협력병원
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="flex flex-col gap-9">
+                            <a href="" class="block text-[26px] leading-[31px] text-[#111111]">
+                                운동 프로그램
+                            </a>
+                            <ul class="font-semibold text-[18px] leading-[21px]">
+                                <li>
+                                    <a href="" class="text-[#666666] hover:text-[#6CBEC1] transition-all duration-300 ease-out">
+                                        닥터 케어 트레이닝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        척추 교정 트레이닝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        시니어 트레이닝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        목적성 트레이닝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        중·고생 수험생 트레이닝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        산전·산후 트레이닝
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        엘리트&아마추어 선수 트레이닝
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div data-lenis-prevent id="siteMap" class="bg-white transition transition-all duration-300 ease-out fixed top-0 w-full bg-white z-[999] box-border overflow-y-auto h-full max-h-screen flex flex-col items-center 2xl:pt-0 pt-[114px] gap-10 after:z-[-1] after:content-[''] after:block after:opacity-[0.15] after:absolute after:left-[-140px] after:bottom-[-50px] after:w-[282px] after:h-[532px] after:bg-center after:bg-contain after:bg-no-repeat after:bg-[url('assets/images/global/siteMap_bg.png')] opacity-0 invisible right-[-100%]">
+
+         <!--    lg:hidden block-->
+        <div class="hidden sticky z-[9999] left-0 top-0 w-full md:mb-[50px] shadow-sm bg-white">
+            <div class="text-gray-900 transform mx-auto 2xl:w-[1440px] w-[95%] flex items-center justify-between py-4">
+                <span class="block 2xl:w-[10%] w-[15%]">
+                    <a href="/index.php" class="block w-20 h-12 bg-contain bg-no-repeat bg-center" style="background-image: url('https://recurvept.com/wp-content/themes/recurve/assets/images/global/logo.png');">
+                        <span class="sr-only">Recurve</span>
+                    </a>
+                </span>
+                <div class="flex justify-end gap-4 items-center lg:h-[52px]">
+
+                    <button id="siteMapCloseBtn">
+                        <svg class="size-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 햄버거 메뉴 네비-->
+        <div class="borderMenu 2xl:flex hidden h-full 2xl:w-[1440px] w-[95%] mx-auto flex-wrap justify-center items-center ">
+            <ul class="flex flex-wrap justify-start items-start w-full">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40 w-1/4 flex flex-col gap-9 px-10 box-border py-10 w-1/4 px-10 box-border py-10">
+                    <a href="https://recurvept.com/recurve-intro/" class="w-full inline-block font-bold text-[32px] text-[#111111]">리커브 소개</a>
+                    <ul class="sub-menu flex flex-col gap-7 text-gray-700 font-semibold text-2xl">
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/recurve-intro/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">리커브 소개</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/medical/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">의료진&amp;강사진 소개</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/information/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">시설안내</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/location/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">지점 및 협력병원</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45 w-1/4 flex flex-col gap-9 px-10 box-border py-10 w-1/4 px-10 box-border py-10">
+                    <a href="https://recurvept.com/doctor-care-training/" class="w-full inline-block font-bold text-[32px] text-[#111111]">운동 프로그램</a>
+                    <ul class="sub-menu flex flex-col gap-7 text-gray-700 font-semibold text-2xl">
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/doctor-care-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">닥터 케어 트레이닝</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/spine-correction-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">척추 교정 트레이닝</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/senior-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">시니어 트레이닝</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/purpose-based-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">목적성 트레이닝</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/junior-student-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">중·고생 수험생 트레이닝</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/prepostnatal-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">산전·산후 트레이닝</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/eliteamateur-training/" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">엘리트 선수 트레이닝</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-53 w-1/4 flex flex-col gap-9 px-10 box-border py-10 w-1/4 px-10 box-border py-10">
+                    <a href="https://recurvept.com/notice/" class="w-full inline-block font-bold text-[32px] text-[#111111]">커뮤니티</a>
+                    <ul class="sub-menu flex flex-col gap-7 text-gray-700 font-semibold text-2xl">
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/notice/?type=case" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">개선사례</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://recurvept.com/notice/?type=notice" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">공지사항</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54 w-1/4 flex flex-col gap-9 px-10 box-border py-10 w-1/4 px-10 box-border py-10">
+                    <a href="https://recurvept.com/contact/" class="w-full inline-block font-bold text-[32px] text-[#111111]">문의하기</a>
+                    <ul class="sub-menu flex flex-col gap-7 text-gray-700 font-semibold text-2xl">
+                        <li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190">
+                            <a href="https://recurvept.com/contact/?type=free" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">무료상담</a>
+                        </li>
+                        <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+                            <a href="https://recurvept.com/contact/?type=franchise" class="text-[22px] leading-[26px] block text-[#666666] hover:text-[#6CBEC1] transition transition-all duration-300 ease-out">가맹문의</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194 w-1/4 px-10 box-border py-10">
+                    <a target="_blank" href="https://xn--vb0b361axyhuja83sa697mf2b.com/" class="w-full inline-block font-bold text-[32px] text-[#111111]">본척척재활의학과의원</a>
+                </li>
+            </ul>
+        </div>
+        <!-- mb 메뉴 네비-->
+        <div class="2xl:hidden flex w-full mx-auto flex-col justify-center md:gap-6 items-center">
+            <ul id="menu-%eb%a6%ac%ec%bb%a4%eb%b8%8c-1" class="2xl:hidden flex w-full mx-auto flex-col justify-center items-center">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40 group relative w-full overflow-hidden border-b-2 border-gray-200">
+                    <a href="https://recurvept.com/recurve-intro/" class="flex justify-between items-center mx-auto w-[90%] px-[5%] box-border cursor-pointer lg:text-[20px] text-[17px] font-bold text-gray-900 lg:leading-[24px] block
+                        relative cursor-pointer transition-all duration-500 ease-out md:py-6 py-3 box-border block flex">리커브 소개<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#111111] duration-300 transition-transform submenu-arrow " viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.94l3.72-3.73a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <ul class="sub-menu text-gray-700 flex flex-col gap-4 overflow-hidden transition-all duration-300 font-semibold lg:text-[17px] text-[15px] ease-out max-h-0 opacity-0 invisible pt-0">	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="https://recurvept.com/recurve-intro/" class="w-[90%] mx-auto px-[5%] box-border block">리커브 소개</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
+                            <a href="https://recurvept.com/medical/" class="w-[90%] mx-auto px-[5%] box-border block">의료진&amp;강사진 소개</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
+                            <a href="https://recurvept.com/information/" class="w-[90%] mx-auto px-[5%] box-border block">시설안내</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
+                            <a href="https://recurvept.com/location/" class="w-[90%] mx-auto px-[5%] box-border block">지점 및 협력병원</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45 group relative w-full overflow-hidden border-b-2 border-gray-200">
+                    <a href="https://recurvept.com/doctor-care-training/" class="flex justify-between items-center mx-auto w-[90%] px-[5%] box-border cursor-pointer lg:text-[20px] text-[17px] font-bold text-gray-900 lg:leading-[24px] block
+                        relative cursor-pointer transition-all duration-500 ease-out md:py-6 py-3 box-border block flex">운동 프로그램<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#111111] duration-300 transition-transform submenu-arrow " viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.94l3.72-3.73a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <ul class="sub-menu text-gray-700 flex flex-col gap-4 overflow-hidden transition-all duration-300 font-semibold lg:text-[17px] text-[15px] ease-out max-h-0 opacity-0 invisible pt-0">	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="https://recurvept.com/doctor-care-training/" class="w-[90%] mx-auto px-[5%] box-border block">닥터 케어 트레이닝</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51">
+                            <a href="https://recurvept.com/spine-correction-training/" class="w-[90%] mx-auto px-[5%] box-border block">척추 교정 트레이닝</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
+                            <a href="https://recurvept.com/senior-training/" class="w-[90%] mx-auto px-[5%] box-border block">시니어 트레이닝</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
+                            <a href="https://recurvept.com/purpose-based-training/" class="w-[90%] mx-auto px-[5%] box-border block">목적성 트레이닝</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48">
+                            <a href="https://recurvept.com/junior-student-training/" class="w-[90%] mx-auto px-[5%] box-border block">중·고생 수험생 트레이닝</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                            <a href="https://recurvept.com/prepostnatal-training/" class="w-[90%] mx-auto px-[5%] box-border block">산전·산후 트레이닝</a>
+                        </li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46">
+                            <a href="https://recurvept.com/eliteamateur-training/" class="w-[90%] mx-auto px-[5%] box-border block">엘리트 선수 트레이닝</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-53 group relative w-full overflow-hidden border-b-2 border-gray-200">
+                    <a href="https://recurvept.com/notice/" class="flex justify-between items-center mx-auto w-[90%] px-[5%] box-border cursor-pointer lg:text-[20px] text-[17px] font-bold text-gray-900 lg:leading-[24px] block
+                        relative cursor-pointer transition-all duration-500 ease-out md:py-6 py-3 box-border block flex">커뮤니티<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#111111] duration-300 transition-transform submenu-arrow " viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.94l3.72-3.73a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <ul class="sub-menu text-gray-700 flex flex-col gap-4 overflow-hidden transition-all duration-300 font-semibold lg:text-[17px] text-[15px] ease-out max-h-0 opacity-0 invisible pt-0">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-189">
+                            <a href="https://recurvept.com/notice/?type=case" class="w-[90%] mx-auto px-[5%] box-border block">개선사례</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+                            <a href="https://recurvept.com/notice/?type=notice" class="w-[90%] mx-auto px-[5%] box-border block">공지사항</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54 group relative w-full overflow-hidden border-b-2 border-gray-200">
+                    <a href="https://recurvept.com/contact/" class="flex justify-between items-center mx-auto w-[90%] px-[5%] box-border cursor-pointer lg:text-[20px] text-[17px] font-bold text-gray-900 lg:leading-[24px] block
+                        relative cursor-pointer transition-all duration-500 ease-out md:py-6 py-3 box-border block flex">문의하기<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#111111] duration-300 transition-transform submenu-arrow " viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06 0L10 10.94l3.72-3.73a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <ul class="sub-menu text-gray-700 flex flex-col gap-4 overflow-hidden transition-all duration-300 font-semibold lg:text-[17px] text-[15px] ease-out max-h-0 opacity-0 invisible pt-0">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190">
+                            <a href="https://recurvept.com/contact/?type=free" class="w-[90%] mx-auto px-[5%] box-border block">무료상담</a>
+                        </li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+                            <a href="https://recurvept.com/contact/?type=franchise" class="w-[90%] mx-auto px-[5%] box-border block">가맹문의</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194 w-full overflow-hidden border-b-2 border-gray-200">
+                    <a target="_blank" href="https://xn--vb0b361axyhuja83sa697mf2b.com/" class="flex justify-between items-center mx-auto w-[90%] px-[5%] box-border cursor-pointer lg:text-[20px] text-[17px] font-bold text-gray-900 lg:leading-[24px] block
+                        relative cursor-pointer transition-all duration-500 ease-out md:py-6 py-3 box-border block flex">본척척재활의학과의원
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ✅ 모바일: 로그인/로그아웃 라인 -->
+
+        <div class="xl:hidden w-full mx-auto px-5">
+            <div class="w-full flex items-center justify-center gap-3 text-[14px] font-semibold text-[#8C8C8C] py-4 border-b border-black/5">
+                <a href="https://recurvept.com/login" class="hover:text-[#6FC1BC] transition" title="로그인">
+                    로그인
+                </a>
+                <span class="opacity-40">|</span>
+                <a href="/contact/?type=franchise" class="hover:text-[#6FC1BC] transition">가맹문의</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fixed lg:right-12 md:right-10 right-5 lg:bottom-12 md:bottom-10 bottom-5 flex flex-col md:gap-2 gap-1">
+        <a href="" class="block md:w-[60px] w-[50px] md:h-[60px] h-[50px] rounded-full bg-[#74B6B2] relative
+            after:content-[''] after:absolute md:after:w-7 after:w-6 md:after:h-7 after:h-6 after:left-1/2 after:top-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:bg-center after:bg-contain after:bg-no-repeat after:bg-[url('assets/images/global/contact_icon.png')]">
+            <span class="sr-only">문의하기</span>
+        </a>
+        
+        <button id="topBtn" onclick="scrollToTop();" class="relative mx-auto font-semibold text-[12px] text-white bg-[#27282A] md:w-[60px] md:h-[60px] h-[50px] w-[50px] rounded-full">
+            <svg class="size-6 text-white absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </button>
+    </div>
+
+    <section class="h-[100vh] bg-black"></section>
+
+
+    <footer class="bg-[#282828]">
+        <div class="2xl:w-[1280px] lg:w-[90%] md:w-[720px] w-[90%] mx-auto lg:pt-12 pt-[60px]">
+            <div class="flex justify-between items-center">
+                <a href="" class="lg:w-[164px] w-[134px] lg:h-[65px] h-[53px] block bg-center bg-contain bg-no-repeat" style="background-image: url('assets/images/global/footer_logo.png');">
+                    <span class="sr-only">리커브</span>
+                </a>
+                
+                <div class="flex md:gap-8 gap-3 md:flex-row flex-col items-end">
+                    <a href="" class="lg:text-[22px] text-[20px] lg:leading-[26px] leading-[24px] text-white font-semibold">
+                        <span class="inline-block pr-[30px] relative">
+                            가맹문의
+                            <span class="lg:w-6 w-5 lg:h-6 h-5 bg-white rounded-full absolute right-0 top-1/2 transform -translate-y-1/2">
+                                <svg class="size-3 text-[#2C2C2C] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </span>
+                        </span>
+                    </a>
+                    <a href="" class="lg:text-[22px] text-[20px] lg:leading-[26px] leading-[24px] text-white font-semibold">
+                        <span class="inline-block pr-[30px] relative">
+                            무료상담 문의
+                            <span class="lg:w-6 w-5 lg:h-6 h-5 bg-white rounded-full absolute right-0 top-1/2 transform -translate-y-1/2">
+                                <svg class="size-3 text-[#2C2C2C] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-between lg:flex-nowrap flex-wrap lg:py-[100px] py-[50px] gap-y-[50px]">
+                <div class="lg:w-auto md:w-full w-1/2">
+                    <span class="block font-bold md:text-[24px] text-[20px] text-white mb-4">
+                        Re;curve
+                    </span>
+                    <span class="md:text-[18px] text-[14px] md:leading-[24px] leading-[20px] text-white">
+                        몸과 인생의 곡선을 <br>
+                        다시 그려주는 곳, 리커브
+                    </span>
+                </div>
+
+                <div class="md:w-auto w-1/2">
+                    <span class="block font-bold lg:text-[20px] md:text-[18px] text-[16px] text-white mb-4">
+                        ADDRESS
+                    </span>
+                    <address class="not-italic block lg:text-[18px] md:text-[16px] text-[14px] lg:leading-[24px] md:leading-[22px] leading-[20px] text-[#B9B9B9]">
+                        경기도 분당구 성남대로 <br>
+                        916번길 5, 706호
+                    </address>
+                </div>
+
+                <div class="md:w-auto w-full">
+                    <span class="block font-bold lg:text-[20px] md:text-[18px] text-[16px] text-white mb-4">
+                        CONTACT
+                    </span>
+                    <div class="flex flex-col gap-1">
+                        <div class="lg:text-[18px] text-[16px] flex gap-3">
+                            <span class="text-[#B9B9B9] lg:w-[75px] w-[65px] block">
+                                고객센터
+                            </span>
+                            <a href="tel:+82050714418303" class="font-semibold text-white">
+                                0507. 1441. 8303
+                            </a>
+                        </div>
+
+                        <div class="lg:text-[18px] md:text-[16px] text-[14px] flex gap-3">
+                            <span class="text-[#B9B9B9] lg:w-[75px] w-[65px] block">
+                                E-Mail
+                            </span>
+                            <a href="mailto:+recurvemarket@naver.com" class="text-white">
+                                recurvemarket@naver.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-auto w-full">
+                    <span class="block font-bold lg:text-[20px] md:text-[18px] text-[16px] text-white mb-4">
+                        리커브 Re;curve
+                    </span>
+                    <div class="flex flex-col gap-1">
+                        <div class="lg:text-[18px] md:text-[16px] text-[14px] flex gap-2">
+                            <span class="text-[#B9B9B9] block">
+                                대표이사
+                            </span>
+                            <span class="font-semibold text-white">
+                                한승희
+                            </span>
+                        </div>
+                        <div class="lg:text-[18px] md:text-[16px] text-[14px] flex gap-2">
+                            <span class="text-[#B9B9B9] block">
+                                사업자 등록번호
+                            </span>
+                            <span class="font-semibold text-white">
+                                332-86-03645
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-[rgba(217,217,217,0.3)] py-5">
+            <div class="2xl:w-[1280px] lg:w-[90%] md:w-[720px] w-[90%] mx-auto flex md:flex-row flex-col md:items-center justify-between md:gap-0 gap-4">
+                <div class="flex md:gap-5 gap-1 md:flex-row flex-col items-start">
+                    <p class="text-sm text-white opacity-[0.8]">
+                        Copyright © Re;curve. All Rights Reserved.
+                    </p>
+                    <button class="font-semibold text-sm text-white underline opacity-[0.8]">
+                        개인정보처리방침
+                    </button>
+                </div>
+
+                <div class="flex gap-[10px] items-center">
+                    <a href="" target="_blank" class="w-[38px] h-[38px] rounded-full relative block bg-[#3F3F3F]
+                        after:content-[''] after:absolute after:left-1/2 after:top-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:w-[14px] after:h-[14px] after:bg-center after:bg-contain after:bg-no-repeat after:bg-[url('assets/images/global/instagram.png')]">
+                        <span class="sr-only">instagram</span>
+                    </a>
+                    <a href="" target="_blank" class="w-[38px] h-[38px] rounded-full relative block bg-[#3F3F3F]
+                        after:content-[''] after:absolute after:left-1/2 after:top-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:w-[14px] after:h-[10px] after:bg-center after:bg-contain after:bg-no-repeat after:bg-[url('assets/images/global/youtube.png')]">
+                        <span class="sr-only">youtube</span>
+                    </a>
+                    <a href="" target="_blank" class="w-[38px] h-[38px] rounded-full relative block bg-[#3F3F3F]
+                        after:content-[''] after:absolute after:left-1/2 after:top-1/2 after:transform after:-translate-x-1/2 after:-translate-y-1/2 after:w-[14px] after:h-[13px] after:bg-center after:bg-contain after:bg-no-repeat after:bg-[url('assets/images/global/blog.png')]">
+                        <span class="sr-only">blog</span>
+                    </a>
+                </div>
+            </div>
+             
+            
+        </div>
+    </footer>
+
+
+
+    <script>
+        // 스크롤을 최상단으로 올리는 함수
+       function scrollToTop() {
+           window.scrollTo({ top: 0, behavior: 'smooth' });
+       }
+    </script>
+    <!-- topBtn Fin -->
+
+    
+    
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function(){
+
+            const hamburgerButton = document.getElementById('hamburger');
+            const bodyElement = document.body;
+
+            let firstSpan = document.querySelector('#hamburger span:nth-child(1)');
+            let secondSpan = document.querySelector('#hamburger span:nth-child(2)');
+            let lastSpan = document.querySelector('#hamburger span:nth-child(3)');
+
+
+            this.classList.toggle('active');
+
+            // 페이지 스크롤이 0이 아닐 때 bg-white 클래스를 추가
+            if (hamburgerButton.classList.contains('active')) {
+
+                bodyElement.classList.add('overflow-y-hidden');
+
+                document.getElementById('siteMap').classList.remove('opacity-0', 'invisible','right-[-100%]');
+                document.getElementById('siteMap').classList.add('opacity-100', 'visible', 'right-0');
+
+                firstSpan.classList.add('translate-y-1');
+                firstSpan.classList.add('rotate-45');
+                secondSpan.classList.add('-translate-y-[5px]');
+                secondSpan.classList.add('-rotate-45');
+                lastSpan.classList.add('hidden');
+
+                const siteMapCloseButton = document.getElementById('siteMapCloseBtn');
+                siteMapCloseButton.addEventListener('click', function(){
+                    document.getElementById('siteMap').classList.remove('opacity-100', 'visible', 'right-0');
+                    document.getElementById('siteMap').classList.add('opacity-0', 'invisible', 'right-[-100%]');
+                    hamburgerButton.classList.remove('active');
+
+                    bodyElement.classList.remove('overflow-y-hidden');
+
+                })
+            } else {
+                document.getElementById('siteMap').classList.remove('opacity-100', 'visible', 'right-0');
+                document.getElementById('siteMap').classList.add('opacity-0', 'invisible', 'right-[-100%]');
+
+                firstSpan.classList.remove('translate-y-1');
+                firstSpan.classList.remove('rotate-45');
+                secondSpan.classList.remove('-translate-y-[5px]');
+                secondSpan.classList.remove('-rotate-45');
+                lastSpan.classList.remove('hidden');
+
+                bodyElement.classList.remove('overflow-y-hidden');
+            }
+        })
+    </script>
+    <!-- 사이트맵 오른쪽에서 나오게하기 -->
+
+    <script>
+        let menuInitialized = false;
+
+        function initMenu() {
+            // 이미 초기화된 상태라면 초기화하지 않음
+            if (menuInitialized) return;
+
+            document.querySelectorAll('#siteMap .menu-item-has-children > a').forEach(function(menuLink) {
+                menuLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const submenu = menuLink.parentElement.querySelector('.sub-menu');
+                    const arrow = menuLink.querySelector('.submenu-arrow');
+
+                    if(submenu){
+                        if(submenu.classList.contains('max-h-0')){
+                            submenu.classList.remove('max-h-0', 'opacity-0', 'invisible','pt-0');
+                            submenu.classList.add('py-8', 'bg-[#F9F9F9]');
+                            submenu.style.maxHeight = '400px';
+                        } else {
+                            submenu.style.maxHeight = '0px';
+                            submenu.classList.add('max-h-0', 'opacity-0', 'invisible','pt-0');
+                            submenu.classList.remove('py-8', 'bg-[#F9F9F9]');
+                        }
+                    }
+
+                    if(arrow){
+                        arrow.classList.toggle('rotate-[180deg]');
+                    }
+                });
+            });
+
+            menuInitialized = true;  // 초기화된 상태로 표시
+        }
+
+        function destroyMenu() {
+            document.querySelectorAll('#siteMap .menu-item-has-children > a').forEach(function(menuLink) {
+                // 이벤트 리스너 제거 (메뉴 초기화 상태로 되돌리기)
+                const clonedMenuLink = menuLink.cloneNode(true);
+                menuLink.replaceWith(clonedMenuLink);
+            });
+
+            menuInitialized = false;  // 초기화 상태 해제
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.innerWidth <= 1540) {  // 화면 크기가 1540px 이하일 때만 실행
+                initMenu(); // 초기화 함수 호출
+            }
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 1540 && !menuInitialized) {
+                    initMenu(); // 화면 크기 변경 후, 초기화 함수 호출
+                } else if (window.innerWidth > 1540 && menuInitialized) {
+                    destroyMenu(); // 화면 크기가 1540px 이상일 경우 메뉴 초기화 해제
+                }
+            });
+        });
+    </script>
+    <!-- 모바일 메뉴 열기 -->
+    <!-- ---------------------------- header mo Fin ---------------------------- -->
+
+
+    <script>
+        const btns = document.querySelectorAll('.btn-select');
+        const lists = document.querySelectorAll('.list-member');
+        const arrows = document.querySelectorAll('.arrow-icon');
+
+        btns.forEach((btn, index) => {
+            const list = lists[index];
+            const arrow = arrows[index];
+
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+
+                if (btn.classList.contains('active')) {
+                    list.classList.add('visible');
+                    list.classList.remove('invisible');
+                    list.classList.add('opacity-1');
+                    list.classList.remove('opacity-0');
+
+                    arrow.classList.add('rotate-180');
+                    arrow.classList.remove('rotate-0');
+                    arrow.classList.add('-translate-1/2');
+                } else {
+                    list.classList.add('invisible');
+                    list.classList.remove('visible');
+                    list.classList.add('opacity-0');
+                    list.classList.remove('opacity-1');
+
+                    arrow.classList.remove('rotate-180');
+                    arrow.classList.add('rotate-0');
+                    arrow.classList.remove('-translate-1/2');
+                }
+            });
+
+            list.addEventListener('click', (event) => {
+                if (event.target.nodeName === "BUTTON") {
+                    btn.innerText = event.target.innerText;
+                    btn.classList.remove('active');
+                    arrow.classList.add('rotate-0');
+                    arrow.classList.remove('-translate-1/2');
+
+                    list.classList.add('invisible');
+                    list.classList.remove('visible');
+                    list.classList.add('opacity-0');
+                    list.classList.remove('opacity-1');
+                }
+            });
+        });
+
+    </script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type"></script>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const textSwiper = new Swiper('.text-swiper-container', {
+                autoplay: {
+                    delay: 2300, // 슬라이드 간 전환 시간 (밀리초 단위)
+                    disableOnInteraction: false, // 사용자가 슬라이드를 조작해도 자동 재생 유지
+                },
+                speed: 1000, // 슬라이드 전환 속도 (밀리초 단위), 더 큰 값은 더 느린 전환
+                // Optional parameters
+                direction: 'vertical',
+                loop: true,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,  // 한 번에 넘기는 슬라이드 수
+                spaceBetween: 25,
+
+                autoHeight: true,
+                allowTouchMove: false,
+            });
+
+            window.addEventListener('resize', function() {
+                textSwiper.update();
+                textSwiper.autoplay.start();
+            });
+        });
+    </script>
+    <!-- 헤더 텍스트 전환 슬라이드 -->
+
+
+    
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const lenis = new Lenis({
+            smooth: true,
+            direction: 'vertical',
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP ScrollTrigger 연동
+        lenis.on('scroll', () => {
+            ScrollTrigger.update();
+        });
+
+        // 필요 시 ScrollTrigger.refresh()
+        window.addEventListener('load', () => {
+            ScrollTrigger.refresh();
+        });
+    </script>
+    <!-- lenis Fin -->
+
+
+</body>
+</html>
