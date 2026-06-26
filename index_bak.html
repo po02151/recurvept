@@ -509,37 +509,23 @@
                 overflow: hidden;
             }
 
-            /* 🔥 원 컨테이너 */
-            .circle-wrap {
-                position: absolute;
-                left: 50%;
-                top: 55%;
-                width: 40vmin;
-                height: 40vmin;
-                border-radius: 50%;
-                overflow: hidden;
-
-                transform: translate(-50%, -50%) scale(1);
-                will-change: transform; /* transform만 사용 */
-            }
-
-            /* video */
             .video {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                /* clip-path: circle(150px at 50% 40%); */
+                will-change: clip-path;
             }
 
-            /* 텍스트 */
             .txtBox {
                 pointer-events: none;
                 opacity: 0;
             }
-
         </style>
         <section class="video-section h-[200vh] relative text-center bg-[#F9F9F3] lg:pt-[150px] md:pt-[140px] pt-20">
+            
 
-            <div class="hfull_section video-container relative z-10">
+            <div class="video-container">
                 <div class="absolute left-0 top-0 w-full">
                     <span class="font-bold lg:text-xl md:text-lg text-sm text-[#6CBEC1] block lg:mb-8 md:mb-6 mb-4">
                         Medical-Based Performance Training
@@ -557,41 +543,32 @@
                             </span>
                             <span class="absolute z-[-1] md:-right-[45px] -right-[35px] top-1/2 transform -translate-y-1/2 block lg:w-[60px] md:w-[52px] w-[46px] lg:h-[60px] md:h-[52px] h-[46px] rounded-full border-2 border-[#E4E4E4]">
                                 <svg class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 size-4 text-[#3FB8BE]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                 </svg>
                             </span>
                         </span>
                     </a>
                 </div>
 
-                <div class="hfull_section video-container">
 
-                    <!-- 원형 마스크 -->
-                    <div class="circle-wrap">
-                        <video class="video" muted="" loop="" playsinline="" autoplay="">
-                            <source src="assets/video/main1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-
-                    <!-- 텍스트 -->
-                    <div class="hfull_section txtBox flex items-center justify-center flex-col w-full text-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%); opacity: 0;">
-                        <h3 class="lg:text-[160px] md:text-[120px] text-[60px] lg:leading-[190px] md:leading-[143px] leading-[72px] font-bold md:mb-6 mb-3">
-                            <span class="font-extrabold">Re</span>;curve
-                        </h3>
-                        <p class="font-medium lg:text-[42px] md:text-[32px] text-[24px] lg:pb-[100px] md:pb-20 pb-[64px] relative md:mb-[30px] mb-6
-                                    after:content-[''] after:absolute after:w-[2px] lg:after:h-[70px] md:after:h-[50px] after:h-[40px] after:bg-white after:left-1/2 after:bottom-0 after:transform after:-translate-x-1/2">
-                            바른곡선을 회복하다
-                        </p>
-                        <p class="lg:text-[26px] md:text-[22px] text-[16px] lg:leading-[42px] md:leading-[36px] leading-[26px] opacity-[0.8]">
-                            삐뚤어진 자세, 반복되는 통증, 지쳐버린 일상 <br>
-                            이 모든 ‘삐뚤어진 곡선'을 다시 건강한 곡선으로 <br>
-                            그려 주고 싶다는 마음에서 시작되었습니다
-                        </p>
-                    </div>
-
+                <video class="video" src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay muted loop></video>
+            
+                <div class="txtBox flex items-center justify-center flex-col w-full h-full  text-white absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <h3 class="lg:text-[160px] md:text-[120px] text-[60px] lg:leading-[190px] md:leading-[143px] leading-[72px] font-bold md:mb-6 mb-3">
+                        <span class="font-extrabold">Re</span>;curve
+                    </h3>
+                    <p class="font-medium lg:text-[42px] md:text-[32px] text-[24px] lg:pb-[100px] md:pb-20 pb-[64px] relative md:mb-[30px] mb-6
+                        after:content-[''] after:absolute after:w-[2px] lg:after:h-[70px] md:after:h-[50px] after:h-[40px] after:bg-white after:left-1/2 after:bottom-0 after:transform after:-translate-x-1/2">
+                        바른곡선을 회복하다
+                    </p>
+                    <p class="lg:text-[26px] md:text-[22px] text-[16px] lg:leading-[42px] md:leading-[36px] leading-[26px] opacity-[0.8]">
+                        삐뚤어진 자세, 반복되는 통증, 지쳐버린 일상 <br>
+                        이 모든 ‘삐뚤어진 곡선'을 다시 건강한 곡선으로 <br>
+                        그려 주고 싶다는 마음에서 시작되었습니다
+                    </p>
                 </div>
-
             </div>
+
         </section>
         <!-- section2 Fin -->
 
@@ -3406,38 +3383,68 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        const circle = document.querySelector(".circle-wrap");
+        const video = document.querySelector(".video");
         const videoSection = document.querySelector(".video-section");
+        const videoContainer = document.querySelector(".video-container");
 
-        /* ---------------------------------
-        원 확장 (transform 기반)
-        --------------------------------- */
+        // 최대 반지름: 화면 대각선 길이
+        const maxRadius = Math.sqrt(window.innerWidth**2 + window.innerHeight**2);
 
-        gsap.to(circle, {
-            scale: 8,  // 충분히 커지게
-            ease: "none",
-            scrollTrigger: {
+        function getStartClipPath() {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            const min = Math.min(w, h);
+
+            // 모바일
+            if (w < 768) {
+                return `circle(${min * 0.28}px at 50% 55%)`;
+            }
+
+            // 태블릿
+            if (w < 1280) {
+                return `circle(${min * 0.22}px at 50% 60%)`;
+            }
+
+            // 데스크탑
+            return `circle(${min * 0.18}px at 50% 60%)`;
+        }
+
+        gsap.fromTo(
+            video,
+            {
+                // clipPath: "circle(150px at 50% 50%)"
+                clipPath: getStartClipPath()
+            },
+            {
+                clipPath: `circle(${maxRadius}px at 50% 50%)`,
+                ease: "none",
+                scrollTrigger: {
                 trigger: videoSection,
                 start: "top top",
                 end: "50% top",
-                scrub: 0.5, // 모바일에서도 안정적
+                scrub: true,
+                }
             }
-        });
+        );
 
-        /* ---------------------------------
-        텍스트 등장
-        --------------------------------- */
-
-        gsap.to(".txtBox", {
-            opacity: 1,
-            y: -20,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: videoSection,
-                start: "30% top",
-                end: "65% top",
-                scrub: 0.5,
+        gsap.fromTo(
+            ".txtBox",
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: videoSection,
+                    start: "30% top", // 원래 50% → 40%로 앞당김
+                    end: "65% top",   // 원래 75% → 65%로 앞당김
+                    scrub: true
+                }
             }
+        );
+
+        window.addEventListener("resize", () => {
+            ScrollTrigger.refresh();
         });
     </script>
     <!-- section2 원 차오르는 효과 Fin -->
